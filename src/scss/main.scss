@@ -1,5 +1,8 @@
 @import "reset";
+@import "abstracts/variables";
+
 @import "components/header";
+@import "components/cart";
 
 body {
   font-family: "Open Sans", sans-serif;

@@ -1,3 +1,7 @@
-const serverurl = process.env.SERVER_API;
+import { cart } from "./components/cart";
 
-console.log("Dev m3", serverurl);
+const productsInCart = [];
+
+const headerCart = document.querySelector(".header__cart");
+
+headerCart.appendChild(cart(productsInCart));

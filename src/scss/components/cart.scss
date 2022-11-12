@@ -1,0 +1,18 @@
+.cart__hero {
+  position: relative;
+
+  &__total_products {
+    position: absolute;
+    bottom: -30%;
+    right: -50%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: 0.625rem;
+
+    border-radius: 1rem;
+    background-color: $color-blue-600;
+    color: $color-white;
+    padding: 0.06rem 0.18rem;
+  }
+}
