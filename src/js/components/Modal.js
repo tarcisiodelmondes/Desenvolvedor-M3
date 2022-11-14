@@ -1,4 +1,4 @@
-export function modal({ title, content }) {
+export function Modal({ title, content }) {
   const div = document.createElement("div");
   div.classList.add("modal__hero");
 
@@ -21,8 +21,8 @@ export function modal({ title, content }) {
 }
 
 export function closeModal() {
-  const modal = document.querySelector(".modal__hero");
-  modal.classList.remove("modal__active");
+  const modalElement = document.querySelector(".modal");
+  modalElement.innerHTML = "";
 }
 
 export function openModal() {

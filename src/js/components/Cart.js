@@ -1,4 +1,4 @@
-export function cart(productsInCart) {
+export function Cart(productsInCart) {
   const totalProductsInCart = productsInCart.length;
 
   const cartDiv = document.createElement("div");
@@ -13,7 +13,6 @@ export function cart(productsInCart) {
 }
 
 export function updateCart(cartContainer, productsInCart) {
-  console.log(productsInCart.length);
   cartContainer.innerHTML = "";
-  cartContainer.appendChild(cart(productsInCart));
+  cartContainer.appendChild(Cart(productsInCart));
 }

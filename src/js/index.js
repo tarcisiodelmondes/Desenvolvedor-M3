@@ -1,13 +1,35 @@
-import { cart } from "./components/cart";
-import { closeModal, modal, openModal } from "./components/modal";
-import { orderModalContent } from "./components/orderModalContent";
+import { Cart } from "./components/Cart";
+import { FiltersContainer } from "./components/FilterModalContent";
+import { ColorsContainer } from "./components/FilterModalContent/Colors";
+import { CheckboxColors } from "./components/FilterModalContent/Colors/CheckboxColors";
+import { closeModal, Modal, openModal } from "./components/Modal";
+import { OrderModalContent } from "./components/OrderModalContent";
 import { toggleOrderMenu } from "./functions/toggleOrderMenu";
 import { clearClasses } from "./utils/clearClasses";
 
 const productsInCart = [];
+const filters = {
+  colors: [],
+  sizes: [],
+  prices: { initial: null, final: null },
+};
+const colors = [
+  "Amarelo",
+  "Azul",
+  "Branco",
+  "Cinza",
+  "Laranja",
+  "Verde",
+  "Vermelho",
+  "Preto",
+  "Rosa",
+  "Vinho",
+];
+
+const modalElement = document.querySelector(".modal");
 
 const headerCart = document.querySelector(".header__cart");
-headerCart.appendChild(cart(productsInCart));
+headerCart.appendChild(Cart(productsInCart));
 
 const selectMenuOrderBtn = document.querySelector(".select__btn");
 selectMenuOrderBtn.addEventListener("click", () => {
@@ -44,14 +66,33 @@ const selectOrderFilter = function () {
 };
 
 orderButton.addEventListener("click", () => {
-  const orderElement = orderModalContent(selectOrderFilter);
+  const orderElement = OrderModalContent(selectOrderFilter);
 
-  const modalElement = document.querySelector(".modal");
   modalElement.appendChild(
-    modal({
+    Modal({
       title: "Ordenar",
       content: orderElement,
     })
   );
+
+  openModal();
+});
+
+const filterButton = document.querySelector(".filter__btn");
+filterButton.addEventListener("click", () => {
+  const colorsContainer = ColorsContainer();
+  const divCheckboxColorsContainer = colorsContainer.querySelector(
+    ".colors__container__content"
+  );
+
+  colors.forEach((color) => {
+    divCheckboxColorsContainer.appendChild(CheckboxColors(color));
+  });
+
+  const filterContainer = FiltersContainer([colorsContainer]);
+  modalElement.appendChild(
+    Modal({ title: "Filtrar", content: filterContainer })
+  );
+
   openModal();
 });

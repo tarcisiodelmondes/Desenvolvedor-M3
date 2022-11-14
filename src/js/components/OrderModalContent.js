@@ -1,4 +1,4 @@
-export function orderModalContent(selectFilter) {
+export function OrderModalContent(selectFilter) {
   const div = document.createElement("div");
   div.classList.add("order__select__filter");
 

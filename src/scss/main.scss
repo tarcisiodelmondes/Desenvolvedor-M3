@@ -1,10 +1,13 @@
 @import "reset";
 @import "abstracts/variables";
+@import "base/utilities";
 
 @import "components/header";
 @import "components/cart";
 @import "components/modal.scss";
 @import "components/orderModalContent.scss";
+@import "components/FilterModalContent/index.scss";
+@import "components/checkboxColors.scss";
 
 @import "pages/home.scss";
 
