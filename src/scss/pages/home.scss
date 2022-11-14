@@ -60,6 +60,31 @@
   }
 }
 
+.filter__menu__mobile {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $color-gray-800;
+  height: 40px;
+
+  .filter__menu__divide {
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: $color-gray-800;
+  }
+
+  & > button {
+    width: 100%;
+    background-color: transparent;
+    color: $color-gray-800;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
+
 @media (min-width: 980px) {
   .title__container {
     margin-top: 2.5rem;

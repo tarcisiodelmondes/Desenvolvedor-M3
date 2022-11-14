@@ -1,4 +1,6 @@
 import { cart } from "./components/cart";
+import { closeModal, modal, openModal } from "./components/modal";
+import { orderModalContent } from "./components/orderModalContent";
 import { toggleOrderMenu } from "./functions/toggleOrderMenu";
 import { clearClasses } from "./utils/clearClasses";
 
@@ -31,4 +33,25 @@ selectListMenu.forEach((menuItem, index) => {
 
     toggleOrderMenu();
   });
+});
+
+const orderButton = document.querySelector(".order__btn");
+
+const selectOrderFilter = function () {
+  // fazer seleção de filtro depois
+
+  closeModal();
+};
+
+orderButton.addEventListener("click", () => {
+  const orderElement = orderModalContent(selectOrderFilter);
+
+  const modalElement = document.querySelector(".modal");
+  modalElement.appendChild(
+    modal({
+      title: "Ordenar",
+      content: orderElement,
+    })
+  );
+  openModal();
 });
