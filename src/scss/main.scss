@@ -1,13 +1,25 @@
 @import "reset";
 @import "abstracts/variables";
+@import "base/utilities";
 
 @import "components/header";
 @import "components/cart";
+@import "components/modal.scss";
+@import "components/orderModalContent.scss";
+@import "components/filterModalContent/index.scss";
 
 @import "pages/home.scss";
 
 body {
   font-family: "Open Sans", sans-serif;
+}
+
+body,
+button,
+textarea,
+select,
+input {
+  font: 400 1rem "Open Sans", sans-serif;
 }
 
 .main-hero {

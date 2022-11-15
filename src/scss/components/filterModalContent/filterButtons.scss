@@ -1,0 +1,33 @@
+.filter__buttons__container {
+  display: flex;
+  align-items: center;
+  gap: 1.43751rem;
+
+  .filter__btn {
+    width: 160px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    border: none;
+    cursor: pointer;
+    transition: all 100ms;
+
+    &:hover {
+      filter: brightness(0.94);
+    }
+  }
+
+  .apply__btn {
+    background-color: $color-blue-600;
+    color: $color-white;
+  }
+
+  .clear__btn {
+    background-color: $color-white;
+    color: $color-gray-800;
+    border: 1px solid $color-gray-800;
+  }
+}

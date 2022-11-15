@@ -1,0 +1,10 @@
+@import "pricesContent.scss";
+
+.prices__container__content {
+  margin-top: 1.25rem;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
