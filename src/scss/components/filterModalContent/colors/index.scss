@@ -1,0 +1,14 @@
+@import "checkboxColors.scss";
+
+.colors__container {
+  position: relative;
+
+  &__content {
+    display: none;
+    margin-top: 1.25rem;
+  }
+
+  &__content.active {
+    display: block;
+  }
+}

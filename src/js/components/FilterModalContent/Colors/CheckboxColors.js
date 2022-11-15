@@ -4,7 +4,7 @@ export function CheckboxColors(color) {
   label.htmlFor = color;
 
   label.innerHTML = `
-    <input id="${color}" class="sr-only" type="checkbox" />
+    <input id="${color}" class="sr-only" type="checkbox" value="${color}" />
     <span class="checkbox__mark"></span>
     ${color}
   `;

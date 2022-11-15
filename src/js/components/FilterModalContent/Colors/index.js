@@ -1,23 +1,25 @@
+import { TitleFilter } from "../TitleFilter";
+
 export function ColorsContainer() {
+  const title = "Cores";
+
   const div = document.createElement("div");
   div.classList.add("colors__container");
 
-  div.innerHTML = `
-    <span class="colors__container__title">
-      Cores
-      <img src="../../img/arrow-icon.svg" alt="" />
-    </span>
+  const titleFilterTemplate = TitleFilter(title);
 
+  div.innerHTML = `
+    ${titleFilterTemplate.outerHTML}
     <div class="colors__container__content"></div>
   `;
 
-  const colorButton = div.querySelector(".colors__container__title");
-  colorButton.onclick = openColorsMenu;
+  const colorButton = div.querySelector("#cores");
+  colorButton.onclick = toggleColorsMenu;
 
   return div;
 }
 
-export function openColorsMenu() {
+function toggleColorsMenu() {
   const colorsContent = document.querySelector(".colors__container__content");
   colorsContent.classList.toggle("active");
 }

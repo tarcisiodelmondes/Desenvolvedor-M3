@@ -36,7 +36,7 @@
     .select__list {
       visibility: hidden;
       position: absolute;
-      bottom: -249%;
+      bottom: -127px;
       left: 0;
       border: 1px solid $color-gray-700;
       width: 142px;
@@ -93,5 +93,9 @@
     .select__menu {
       display: block;
     }
+  }
+
+  .filter__menu__mobile {
+    display: none;
   }
 }

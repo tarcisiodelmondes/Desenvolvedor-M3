@@ -1,11 +1,12 @@
-@import "checkboxColors.scss";
-
-.checkbox__colors__container {
+.radio__prices__container {
   display: block;
   position: relative;
   padding-left: 1.55rem;
-  margin-bottom: 12px;
   cursor: pointer;
+
+  &:not(:first-child) {
+    margin-top: 0.625rem;
+  }
 
   & > input {
     position: absolute;
@@ -15,7 +16,7 @@
     width: 0;
   }
 
-  .checkbox__mark {
+  .radio__mark {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -32,11 +33,11 @@
     }
   }
 
-  & > input:checked ~ .checkbox__mark:after {
+  & > input:checked ~ .radio__mark:after {
     display: block;
   }
 
-  & > .checkbox__mark:after {
+  & > .radio__mark:after {
     left: 2px;
     top: 2px;
     width: 10px;

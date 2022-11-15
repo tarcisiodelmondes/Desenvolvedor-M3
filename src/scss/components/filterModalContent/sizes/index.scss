@@ -1,0 +1,14 @@
+@import "sizesContent.scss";
+
+.sizes__container__content {
+  display: none;
+
+  margin-top: 1.25rem;
+  grid-template-columns: repeat(4, 32px);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 8px;
+
+  &.active {
+    display: grid;
+  }
+}
