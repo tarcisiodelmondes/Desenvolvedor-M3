@@ -30,6 +30,7 @@
 
 - Responsividade
 - Carregar mais produtos
+- Adição de processo no gulp para otimizar imagens
 
 ## :rocket: Tecnologias
 
@@ -70,7 +71,8 @@ $ npm run start
 $ http://localhost:3000
 ```
 
-Feito com :heart: by Tarcísio Delmondes
+<p>Feito com :heart: by Tarcísio Delmondes</p>
+<p>Email - tarcisiodelmondes@gmail.com</p>
 
 &#xa0;
 
