@@ -1,0 +1,20 @@
+.header__hero {
+  border-bottom: 1px solid #c7c7c7;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.68rem;
+  max-width: 1147px;
+  margin: 0 auto;
+
+  & > img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    width: 119px;
+    height: 30px;
+  }
+}

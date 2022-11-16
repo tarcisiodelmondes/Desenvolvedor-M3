@@ -1,19 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desenvolvedor M3</title>
-  <link rel="stylesheet" href="main.css" />
-</head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-</body>
-<h1>Desafio m3</h1>
+    <title>Desenvolvedor M3</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
 
-<script src="bundle.js"></script>
+  <body>
+    <header class="header__hero">
+      <div class="header__content">
+        <img
+          class="header__logo"
+          src="img/logo-m3.png"
+          alt="M3 - performance digital"
+        />
 
+        <div class="header__cart"></div>
+      </div>
+    </header>
+
+    <main class="main-hero">
+      <div class="title__container">
+        <h1 class="title__content">Blusas</h1>
+
+        <div class="select__menu">
+          <div class="select__btn">
+            <span>Ordenar por:</span>
+            <img src="img/arrow-icon.svg" alt="" />
+          </div>
+
+          <ul class="select__list">
+            <li data-value="recente">Recentes</li>
+            <li data-value="lower">Menor preço</li>
+            <li data-value="higher">Maior preço</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="filter__menu__mobile">
+        <button class="filter__btn" type="button">Filtrar</button>
+        <span class="filter__menu__divide"></span>
+        <button class="order__btn" type="button">Ordenar</button>
+      </div>
+
+      <section class="products__section">
+        <div class="filters__container"></div>
+        <div class="products__list">
+          <div class="products__content"></div>
+          <button class="more__products__btn" type="button">
+            Carregar mais
+          </button>
+        </div>
+      </section>
+
+      <div class="modal"></div>
+    </main>
+
+    <footer class="footer__hero">
+      <p class="paragraph">M3: Implantação de E-commerce VTEX</p>
+    </footer>
+  </body>
+
+  <script type="module" src="bundle.js"></script>
 </html>

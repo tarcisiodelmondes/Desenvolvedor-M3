@@ -1,0 +1,14 @@
+.footer__hero {
+  background-color: $color-black;
+  color: $color-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33px;
+
+  & > .paragraph {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+  }
+}

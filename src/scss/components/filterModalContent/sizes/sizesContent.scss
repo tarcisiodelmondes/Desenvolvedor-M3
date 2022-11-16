@@ -1,0 +1,23 @@
+.label__sizes__container {
+  & > .span__size__content {
+    width: 32px;
+    height: 32px;
+    border: 1px solid $color-gray-700;
+    background-color: $color-white;
+    color: $color-gray-700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: filter 100ms;
+  }
+
+  &:hover {
+    filter: brightness(0.92);
+  }
+
+  & > input:checked ~ .span__size__content {
+    border-color: $color-blue-600;
+    color: $color-black;
+  }
+}

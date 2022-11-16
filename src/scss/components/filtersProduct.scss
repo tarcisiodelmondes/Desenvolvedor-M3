@@ -1,0 +1,26 @@
+.filters__content {
+  display: none;
+  & > div:not(:first-child) {
+    margin-top: 1.5rem;
+  }
+
+  .filter__sizes__content {
+    display: grid;
+    grid-template-columns: repeat(4, 32px);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .filter__title {
+    display: block;
+    color: $color-gray-900;
+    text-transform: uppercase;
+    margin-bottom: 0.875rem;
+  }
+}
+
+@media (min-width: 980px) {
+  .filters__content {
+    display: block;
+  }
+}

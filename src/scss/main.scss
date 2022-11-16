@@ -1,1 +1,32 @@
 @import "reset";
+@import "abstracts/variables";
+@import "base/utilities";
+
+@import "components/header";
+@import "components/cart";
+@import "components/modal.scss";
+@import "components/orderModalContent.scss";
+@import "components/filterModalContent/index.scss";
+@import "components/footer.scss";
+@import "components/productCard.scss";
+@import "components/filtersProduct.scss";
+
+@import "pages/home.scss";
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+body,
+button,
+textarea,
+select,
+input {
+  font: 400 1rem "Open Sans", sans-serif;
+}
+
+.main-hero {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}

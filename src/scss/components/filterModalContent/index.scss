@@ -1,0 +1,12 @@
+@import "colors/index.scss";
+@import "sizes/index.scss";
+@import "pricesBand/index.scss";
+
+@import "titleFilter.scss";
+@import "filterButtons.scss";
+
+.filters__container {
+  & > div:not(:first-child) {
+    margin-top: 1.875rem;
+  }
+}
