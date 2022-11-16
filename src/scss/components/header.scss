@@ -1,5 +1,6 @@
 .header__hero {
   border: 1px solid #c7c7c7;
+  width: 100vw;
 }
 
 .header__content {
@@ -10,4 +11,11 @@
   padding: 1.68rem;
   max-width: 1147px;
   margin: 0 auto;
+
+  & > img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    width: 119px;
+    height: 30px;
+  }
 }

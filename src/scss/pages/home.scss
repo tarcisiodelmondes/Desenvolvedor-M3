@@ -25,7 +25,7 @@
       background-color: $color-white;
 
       &:hover {
-        filter: brightness(0.95);
+        filter: brightness(0.92);
       }
     }
 
@@ -47,7 +47,7 @@
         background-color: $color-white;
 
         &:hover {
-          filter: brightness(0.95);
+          filter: brightness(0.92);
           transition: all 100ms;
         }
 
@@ -85,6 +85,70 @@
   }
 }
 
+.products__section {
+  margin: 2.17rem 0 2.18rem;
+  display: flex;
+  justify-content: center;
+
+  .products__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    &.product__not__found__container {
+      display: flex;
+      justify-content: flex-start;
+      flex: 1;
+
+      & > .products__content {
+        display: flex;
+        align-self: flex-start;
+      }
+
+      & > .more__products__btn {
+        display: none;
+      }
+
+      .product__not__found {
+        font-size: 1.2rem;
+      }
+    }
+
+    .products__content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1.25rem;
+      row-gap: 1.125rem;
+      justify-items: center;
+    }
+
+    .more__products__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $color-white;
+      background-color: $color-blue-600;
+      border: none;
+      cursor: pointer;
+
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: all 100ms;
+
+      height: 35px;
+      width: 100%;
+      max-width: 175px;
+      margin-top: 2.41rem;
+
+      &:hover {
+        filter: brightness(0.85);
+      }
+    }
+  }
+}
+
 @media (min-width: 980px) {
   .title__container {
     margin-top: 2.5rem;
@@ -97,5 +161,26 @@
 
   .filter__menu__mobile {
     display: none;
+  }
+
+  .products__section {
+    margin-top: 4.06rem;
+    justify-content: flex-start;
+    gap: 11.19rem;
+  }
+}
+
+@media (min-width: 880px) {
+  .products__section {
+    .products__list {
+      & > .products__content {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 4rem;
+        row-gap: 2.625rem;
+      }
+      & > .more__products__btn {
+        margin-top: 4.5rem;
+      }
+    }
   }
 }

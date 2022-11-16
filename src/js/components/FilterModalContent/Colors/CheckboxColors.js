@@ -1,10 +1,12 @@
-export function CheckboxColors(color) {
+export function CheckboxColors(color, id) {
   const label = document.createElement("label");
   label.classList.add("checkbox__colors__container");
-  label.htmlFor = color;
+  label.htmlFor = color + id;
 
   label.innerHTML = `
-    <input id="${color}" class="sr-only" type="checkbox" value="${color}" />
+    <input id="${
+      color + id
+    }" class="sr-only" type="checkbox" value="${color}" />
     <span class="checkbox__mark"></span>
     ${color}
   `;
