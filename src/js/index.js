@@ -282,8 +282,6 @@ pricesBandCheckboxContainer.forEach((priceCheckbox) => {
     const input = priceCheckbox.children[0];
 
     if (input.checked) {
-      clearInputs(pricesBandCheckboxContainer);
-      input.checked = true;
       addPriceBandFilter(input.value, input);
     }
 
